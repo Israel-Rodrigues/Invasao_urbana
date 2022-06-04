@@ -1,50 +1,49 @@
-Tue May 24 14:06:33 2022
+Sat Jun  4 12:50:58 2022
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
  
 
-Bootstrap to the start of init.init took 0.08s
-Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.04s
-Loading script took 0.18s
+Bootstrap to the start of init.init took 0.33s
+Early init took 0.02s
+Loader init took 0.14s
+Loading error handling took 0.09s
+Loading script took 0.91s
 Loading save slot metadata. took 0.11s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.08s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
+Running init code took 0.31s
+Loading analysis data took 0.11s
+Analyze and compile ATL took 0.01s
 Index archives took 0.00s
-Dump and make backups. took 0.06s
+Backing up script files to 'C:\\Users\\rafae\\AppData\\Roaming/RenPy/backups\\invasao_urbana':
+Dump and make backups. took 0.44s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.02s
+Initial gc. took 0.09s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
+Creating interface object took 0.02s
 Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.06s
+Init translation took 0.16s
+Build styles took 0.03s
+Load screen analysis took 0.00s
+Analyze screens took 0.07s
+Save screen analysis took 0.15s
+Prepare screens took 0.33s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
+Save bytecode. took 0.11s
+Running _start took 0.01s
 Performance test:
-Interface start took 0.08s
+Interface start took 0.28s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
+primary display bounds: (0, 0, 1440, 900)
 swap interval: 1 frames
 Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) HD Graphics 530'
-Version: '4.6.0 - Build 27.20.100.9416'
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'ATI Radeon 3000 Graphics'
+Version: '3.3.11672 Compatibility Profile Context'
 Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(1184, 666)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1366, 705) drawable=(1366, 705)
+Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(1338, 753)
 Maximum texture size: 4096x4096
