@@ -1,7 +1,8 @@
-﻿
+﻿init python:
+    import compression
+
 define d = Character("David")
 define t = Character("Theo")
-
 
 image theo = "images/theo.png"
 image david = "images/david.png"
@@ -12,7 +13,9 @@ image janela_direita = "images/janela_direita.jpg"
 image janela_esquerda = "images/janela_esquerda.jpg"
 
 label start:
-
+    python:
+        compression.images()
+        
     # ATO UM
     scene fundo
 
