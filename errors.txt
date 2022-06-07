@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 113: choice menuitem expects a non-empty block.
-    "Janela da esquerda":
-                         ^
+File "game/script.rpy", line 4: invalid syntax
+    call compression.images()
+                    ^
+    
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Wed May 11 21:36:26 2022
+Mon Jun  6 22:19:32 2022
