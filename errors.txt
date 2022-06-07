@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 113: choice menuitem expects a non-empty block.
-    "Janela da esquerda":
-                         ^
+File "game/script.rpy", line 550: screen expects a non-empty block.
+    screen corredor:
+                    ^
+
+File "game/script.rpy", line 551: expected statement.
+    imagemap:
+            ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Wed May 11 21:36:26 2022
+Mon Jun  6 16:34:43 2022
