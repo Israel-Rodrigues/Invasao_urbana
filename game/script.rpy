@@ -386,9 +386,9 @@ label start:
                                             d "{cps=15}“Tô bem curioso para saber o que tem em cada um deles.”{/cps}"
                                             t "Disse, e então ele se virou e seguiu para uma das portas."
 
-                                            jump quartoVisidaEsquerdo
+                                            jump quartoVisitaEsquerdo
 
-                                            label quartoVisidaEsquerdo:
+                                            label quartoVisitaEsquerdo:
                                                 scene quarto_visitaE:
                                                     zoom 0.25
                                                 with pixellate
@@ -402,9 +402,9 @@ label start:
                                                 t "As tábuas na janela, mesmo bem pregadas, permitiam que alguns raios de luz passassem pelas frestas, iluminando o cômodo com uma luz amarelada."
                                                 t "Quando dei uma olhada o David, e ele estava distraído observando algo perto do abajur de parede."
 
-                                                jump quartoVisidaDireito
+                                                jump quartoVisitaDireito
 
-                                                label quartoVisidaDireito:
+                                                label quartoVisitaDireito:
                                                     scene quarto_visitaD:
                                                         zoom 0.24
                                                     with pixellate
@@ -539,22 +539,215 @@ label start:
                                                                     t "{cps=15}“Vamos ter que investigar melhor então.”{/cps}"
 
                                                                     call screen corredor
-                                                                        if _return ==
+                                                                    if _return == "quartoVisitaDireito_puzzle":
+                                                                        jump quartoVisitaDireito_puzzle
+                                                                    elif _return == "quartoVisitaEsquerdo_puzzle":
+                                                                        jump quartoVisitaEsquerdo_puzzle
+                                                                    elif _return == "quarto_infantil_puzzle":
+                                                                        jump quarto_infantil_puzzle
+                                                                    elif _return == "despensa_puzzle":
+                                                                        jump despensa_puzzle
+                                                                    elif _return == "banheiro_puzzle":
+                                                                        jump banheiro_puzzle
+                                                                    elif _return == "escritorio_puzzle":
+                                                                        jump escritorio_puzzle
 
-                                                                    label escritorio_aberto:
-                                                                        scene office_open_door:
-                                                                            zoom 0.70
-                                                                        play music "audio/door-open.ogg" noloop
-                                                                        t "Você acertou a senha, vamos entrar"
 
+                                                                        label quartoVisitaDireito_puzzle:
+                                                                            scene quarto_visitaD:
+                                                                                zoom 0.24
+                                                                            with pixellate
+                                                                            play music "audio/upside down grin2.ogg"
+                                                                            show theo_normal at right:
+                                                                            show david_normal at left:
+
+                                                                        t "{cps=15}“Vamos procurar alguma coisa que indique a senha do cadeado.”{/cps}"
+                                                                        d "{cps=15}“Espera.”{/cps}"
+                                                                        t "David avançou até o abajur na parede."
+                                                                        d "{cps=15}“Esse abajur me chamou atenção mais cedo e vi sobre esses números. Ta escrito 1-4.”{/cps}"
+
+                                                                        call screen corredor
+
+                                                                        label quarto_infantil_puzzle:
+                                                                            scene quarto_infantil:
+                                                                                zoom 0.4
+                                                                            with pixellate
+                                                                            play music "audio/upside down grin2.ogg"
+                                                                            show theo_normal at right:
+                                                                            show david_normal at left:
+
+                                                                        t "Vamos procurar alguma coisa que indique a senha do cadeado."
+                                                                        t "Onde devo procurar?"
+
+                                                                        #CAMA
+                                                                        t "Me aproximo da cama e tento ver se há algo que me chama atenção, mas não tem nada."
+
+                                                                        #ARMÁRIO
+                                                                        t "Me aproximo do armário e abro ele, não há nada dentro."
+
+                                                                        #BRINQUEDOS
+                                                                        t "Me aproximo dos brinquedos que estão no chão espalhados com um aspecto bem triste e destruído."
+                                                                        t "Afastei algumas pelúcias para encontrar uma boneca que me chamou a atenção."
+                                                                        t "Ela vestia uma roupinha amarela com os números 2-9. Acho que é isso."
+
+                                                                        call screen corredor
+
+                                                                        label banheiro_puzzle:
+                                                                            scene banheiro:
+                                                                                zoom 0.67
+                                                                            with pixellate
+                                                                            play music "audio/upside down grin2.ogg"
+                                                                            show theo_normal at right:
+                                                                            show david_normal at left:
+
+                                                                        d "{cps=15}“Cara, não vou entrar aí de jeito nenhum.”{/cps}"
+                                                                        t "David me encarou seriamente."
+                                                                        t "Suspirei. Alguém precisa fazer o trabalho sujo."
+                                                                        t "Onde devo procurar?"
+
+                                                                        #PIA
+                                                                        t "Me aproximei da pia. Não percebi nada em particular além de muito musgo e sujeira. Estava nojento."
+
+                                                                        #BANHEIRA
+                                                                        t "Me aproximei da banheira. Parecia que nada me chamou a atenção, mas então notei uma placa pequena de ferro parafusada perto da torneira que contém os números 3-1."
+
+                                                                        #PRIVADA
+                                                                        t "Me aproximei da privada mas parece que foi uma péssima ideia. Ver de perto a água completamente suja e preta quase me fez golfar."
+
+                                                                        call screen corredor
+
+                                                                        label quartoVisitaEsquerdo_puzzle:
+                                                                            scene quarto_visitaE:
+                                                                                zoom 0.25
+                                                                            with pixellate
+                                                                            play music "audio/upside down grin2.ogg"
+                                                                            show theo_normal at right:
+                                                                            show david_normal at left:
+
+                                                                        d "{cps=15}“Já dei uma olhada aqui e não achei nada que me chamou atenção.”{/cps}"
+                                                                        d "{cps=15}“Bem, então vamos para o próximo.”{/cps}"
+
+                                                                        call screen corredor
+
+                                                                        label despensa_puzzle:
+                                                                            scene despensa:
+                                                                                zoom 0.23
+                                                                            with pixellate
+                                                                            play music "audio/upside down grin2.ogg"
+                                                                            show theo_normal at right:
+                                                                            show david_normal at left:
+
+                                                                        d "{cps=15}“Já dei uma olhada aqui e não achei nada que me chamou atenção.”{/cps}"
+                                                                        d "{cps=15}“Bem, então vamos para o próximo.”{/cps}"
+
+                                                                        call screen corredor
+
+                                                                        label salaReuniao_puzzle:
+                                                                            scene sala_reuniao:
+                                                                                zoom 2.0
+                                                                            with pixellate
+                                                                            play music "audio/upside down grin2.ogg"
+                                                                            show theo_normal at right:
+                                                                            show david_normal at left:
+
+                                                                        d "{cps=15}“Já dei uma olhada aqui e não achei nada que me chamou atenção.”{/cps}"
+                                                                        d "{cps=15}“Bem, então vamos para o próximo.”{/cps}"
+
+                                                                        call screen corredor
+
+                                                                        label escritorio_puzzle:
+                                                                            scene escritorio:
+                                                                                zoom 2.0
+                                                                            with pixellate
+                                                                            play music "audio/upside down grin2.ogg"
+                                                                            show theo_normal at right:
+                                                                            show david_normal at left:
+
+                                                                        d "{cps=15}“Já dei uma olhada aqui e não achei nada que me chamou atenção.”{/cps}"
+                                                                        d "{cps=15}“Bem, então vamos para o próximo.”{/cps}"
+
+                                                                        call screen corredor
+
+                                                                        label escritorio_aberto:
+                                                                            scene office_open_door:
+                                                                                zoom 0.70
+                                                                            play music "audio/door-open.ogg" noloop
+                                                                            t "Você acertou a senha, vamos entrar"
+
+                                                                        jump escritorio_
+
+                                                                        label escritorio_:
+                                                                            scene escritorio:
+                                                                                zoom 2.0
+                                                                            with pixellate
+                                                                            play music "audio/upside down grin2.ogg"
+                                                                            show theo_normal at right:
+                                                                            show david_normal at left:
+
+                                                                        t "Ao entrarmos, nos deparamos com um lugar muito escuro, imediatamente liguei o flash da câmera para iluminar."
+                                                                        t "Dessa vez, as janelas não estavam apenas fechadas com tábuas, mas mas cada uma estava encoberta por cortinas grossas."
+                                                                        t "Conforme o mapa, aquele era o escritório."
+                                                                        t "A mesa gigante, com uma cadeira enorme e chique parecia confirmar a informação."
+                                                                        t "David pegou a lanterna da minha mochila e iluminou as paredes."
+                                                                        t "Nelas, encontramos vários papéis pregados sobre um mapa da cidade."
+                                                                        t "{cps=15}“Que sinistro.”{/cps}"
+                                                                        t "Com cautela, me aproximei da mesa, gravando cada canto que parecia interessante."
+                                                                        t "Empurrei a cadeira, que rangeu bem alto, para acessar as gavetas do móvel."
+                                                                        t "Abri uma por uma em busca de material para o nosso vídeo, até perceber que a última estava emperrada."
+                                                                        t "Forcei o puxador, mas a gaveta não abriu."
+                                                                        t "Certo. Estava trancada. Comecei a procurar a chave na mesa."
+                                                                        d "{cps=15}“Theo…”{/cps}"
+                                                                        t "David chamou, voltei minha atenção para ele."
+                                                                        t "{cps=15}“Encontrou alguma coisa?”{/cps}"
+                                                                        t "Perguntei, me aproximando."
+                                                                        t "Ele apenas apontou a lanterna para o chão, onde havia um rastro vermelho, como se algo tivesse sido arrastado."
+                                                                        d "{cps=15}“Isso é o que eu tô pensando?”{/cps}"
+                                                                        t "David seguiu o rastro com a lanterna até uma porta."
+                                                                        t "Engoli seco."
+                                                                        t "{cps=15}“Vou ir abrir.”{/cps}"
+                                                                        t "Disse, tomando coragem."
+                                                                        t "Adrenalina e medo moviam o meu corpo."
+                                                                        t "Avancei até a porta e girei a maceta mais devagar do que gostaria."
+                                                                        t "O que havia do outro lado da porta tirou completamente meu fôlego."
+                                                                        t "Uma menina, pendurada pelo pescoço por uma corda, cuja a outra extremidade estava presa em uma haste de um equipamento que servia para pendurar roupas."
+                                                                        t "O corpo, completamente dilacerado na barriga — um corte grotesco, pelo qual as tripas escapavam e uma poça de sangue enorme estava embaixo dela."
+                                                                        t "Ainda escorriam algumas gotas de onde havia o corte."
+                                                                        d "{cps=15}“Meu deus…..”{/cps}"
+                                                                        t "David ofegou, em choque."
+                                                                        t "Em seguida, escutei ele dando alguns passos para trás e vomitando."
+                                                                        t "Precisei reunir uma coragem sobre-humana para olhar o rosto."
+                                                                        t "Parece uma jovem da minha idade."
+                                                                        t "Seus cabelos escuros e lisos estavam presos em uma trança que se desfazia perto das pontas."
+                                                                        t "Tudo nela estava pálido, e seu olhar…"
+                                                                        d "{cps=15}“A gente precisa…”{/cps}"
+                                                                        t "David não conseguiu concluir a frase antes de golfar novamente."
+                                                                        t "Foi então que algo me veio à mente."
+                                                                        t "A parede cheia de papéis."
+                                                                        t "Corri para verificar e me deparei com diversas notícias de desaparecimento."
+                                                                        t "Fotos de pessoas cujos rostos eu não conhecia, cartazes de procurados e manchetes de jornal de um serial killer à solta…"
+                                                                        t "Espera…"
+                                                                        t "Seria aquele serial killer que eu vi na notícia hoje cedo?!"
+                                                                        t "{cps=15}“A gente precisa sair daqui…”{/cps}"
+                                                                        t "Olhei para o David esperando uma resposta de fuga, mas ele parecia em choque."
+                                                                        t "Segurei seu braço e comecei a puxar em direção à porta, desesperado."
+                                                                        t "{cps=15}“Cara, vamos logo, a gente precisa ir embora.”{/cps}"
+                                                                        t "De repente um barulho de porta rangendo e logo em seguida um baque ecoou por toda a casa."
+                                                                        t "Parei de caminhar."
+                                                                        t "Minha boca estava completamente seca."
+                                                                        t "Uma sensação de pânico tomou conta do meu corpo."
+                                                                        t "Apertei o braço de David e olhei para ele."
+                                                                        t "Passos começaram a ecoar em toda a casa, pesados e lentos."
+                                                                        t "Nós temos tempo ainda."
+                                                                        t "PRECISAMOS NOS ESCONDER!"
 
     return
 
     screen corredor:
-
-        hotspot(342, 174, 60, 56) action Return("quartoHospedesD")
-        hotspot(475, 264, 56, 58) action Return("quartoHospedesE")
-        hotspot(594, 378, 39, 40) action Return("quartoInfantil")
-        hotspot(865, 204, 65, 53) action Return("despensa")
-        hotspot(701, 323, 42, 39) action Return("banheiro")
-        hotspot(664, 379, 43, 27) action Return("escritorio")
+        imagemap:
+            ground "images/corredor_.png"
+            hotspot(342, 174, 60, 56) action Return("quartoVisitaDireito_puzzle")
+            hotspot(475, 264, 56, 58) action Return("quartoVisitaEsquerdo_puzzle")
+            hotspot(594, 378, 39, 40) action Return("quarto_infantil_puzzle")
+            hotspot(865, 204, 65, 53) action Return("despensa_puzzle")
+            hotspot(701, 323, 42, 39) action Return("banheiro_puzzle")
+            hotspot(664, 379, 43, 27) action Return("escritorio_puzzle")
