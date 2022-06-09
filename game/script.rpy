@@ -14,7 +14,7 @@ image janela_esquerda = "images/janela_esquerda.jpg"
 
 label start:
     python:
-        compression.images()
+        compression.compression('projects\\invasao_urbana\\game\\images')
         
     # ATO UM
     scene fundo
