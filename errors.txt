@@ -2,7 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 627: indentation mismatch.
+File "game/script.rpy", line 607: expected 'label_name' not found.
+    jump menu
+        ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Wed Jun  8 17:02:33 2022
+Fri Jun 10 09:46:16 2022
