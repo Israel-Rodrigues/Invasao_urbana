@@ -27,6 +27,9 @@ image sala_reuniao = "images/sala_reuniao.jpg"
 image rouxinol = "images/rouxinol.jpg"
 image theo = "images/theo.png"
 image theo_normal = "images/theo_normal.png"
+image theo_camera_normal = "images/theo_camera_normal.png"
+image theo_camera_surpreso = "images/theo_camera_surpreso.png"
+image theo_confuso = "images/theo_confuso.png"
 
 label start:
 
@@ -78,7 +81,7 @@ label start:
     t "Ajeitei a postura e me concentrei no conteúdo."
     t "{cps=15}“Cara...”{/cps}"
     show david_normal at left:
-    with pixellate
+    with dissolve
     t "Imediatamente David apareceu ao meu lado."
     t "{cps=15}“Se liga nisso.”{/cps}"
     hide david_normal
@@ -101,7 +104,6 @@ label start:
 
     label garagem:
         scene garage:
-            zoom 0.22
         with pixellate
         play music "audio/quarto_david.mp3"
         show theo_normal at right:
@@ -132,7 +134,6 @@ label start:
 
         label rouxinol:
             scene rouxinol:
-                zoom 0.26
             with pixellate
             play music "audio/upside down grin2.ogg"
             show theo_normal at right:
@@ -175,6 +176,9 @@ label start:
                 t "E realmente: nada de pichações."
                 d "{cps=15}“Ah, é aqui.”{/cps}"
                 t "Comecei a tirar o equipamento da mochila, começando pela a câmera com o aparelho de luz flash em cima, enquanto David ajustava o celular para servir de microfone."
+                hide theo_normal
+                show theo_camera_normal at right:
+                with dissolve
                 t "{cps=15}“Ok, tudo certo aqui.”{/cps}"
                 t "Olhei para meu amigo e ele fez um sinal de positivo para mim."
                 t "Apertei o rec e comecei a gravar."
@@ -198,6 +202,10 @@ label start:
                 t "Segui rodeando a casa pela esquerda enquanto o David continuava examinando as janelas da frente."
                 t "Encontro outra janela, esta com poucas tábuas de madeira."
                 t "Seria fácil invadir se conseguíssemos, por exemplo, um pé de cabra, mas era provável que isso fizesse um barulhão e, apesar do aspecto abandonado, não sabíamos se realmente não havia ninguém ali."
+                hide david_normal
+                hide theo_camera_normal
+                show theo_confuso at right:
+                with dissolve
                 t "O que eu faço?"
 
                 menu:
@@ -209,9 +217,10 @@ label start:
                 label esquerda:
                     play music "audio/upside down grin2.ogg"
                     show theo_normal at right:
-                    show david_normal at left:
 
                     t "{cps=15}“David, vem cá.”{/cps} Chamei um pouco mais alto."
+                    show david_normal at left:
+                    with dissolve
                     t "Em alguns segundos David aparece de pé ao meu lado."
                     t "{cps=15}“Olha lá em cima.”{/cps}"
                     t "Aponto para a janela com poucas tábuas."
@@ -234,15 +243,17 @@ label start:
 
                     label quarto_casal:
                         scene quartoCasal:
-                            zoom 0.67
                         with pixellate
-                        play music "audio/upside down grin2.ogg"
+                        play music "audio/Amb Corredor.ogg"
                         show theo_normal at right:
                         show david_normal at left:
 
                         t "O cômodo era um quarto de casal."
                         t "E assim como o lado de fora, o local estava deplorável."
                         t "Fedia a mofo por causa da cama."
+                        hide theo_normal
+                        show theo_camera_normal at right:
+                        with dissolve
                         t "Peguei novamente minha câmera e comecei a gravar, ao mesmo tempo que David ligava o microfone."
                         d "{cps=15}“Conseguimos entrar na casa pelo primeiro andar.”{/cps}"
                         d "{cps=15}“Aqui parece ser o quarto do casal que vivia neste lugar.”{/cps}"
@@ -261,9 +272,8 @@ label start:
 
                         label quarto_infantil:
                             scene quarto_infantil:
-                                zoom 0.4
                             with pixellate
-                            play music "audio/upside down grin2.ogg"
+                            play music "audio/Amb Corredor.ogg"
                             show theo_normal at right:
                             show david_normal at left:
 
@@ -271,6 +281,9 @@ label start:
                             t "O quarto que entramos tinha um aspecto infantil."
                             t "As paredes, que outrora pareciam ter ostentado um azul bebê, agora estavam sujas pelo tempo e com manchas de infiltração."
                             t "Os brinquedos empoeirados no chão e nas prateleiras, junto com a cama infantil quebrada e o pequeno colchão rasgado completavam o quadro peculiar."
+                            hide theo_normal
+                            show theo_camera_normal at right:
+                            with dissolve
                             t "Peguei a câmera e comecei a gravar."
                             d "{cps=15}“Cara...”{/cps}"
                             t "Arfou David."
@@ -287,11 +300,12 @@ label start:
 
                             label direita:
                                 play music "audio/upside down grin2.ogg"
-                                show theo_normal at right:
-                                show david_normal at left:
+                                show theo_camera_normal at right:
 
                                 t "{cps=15}“Ei, David.”{/cps}"
                                 t "Chamei, indo em direção ao meu amigo."
+                                show david_normal at left:
+                                with dissolve
                                 t "{cps=15}“O que acha daquela janela?”{/cps}"
                                 t "Aponto para a janela logo acima de nós."
                                 t "{cps=15}“Parece fácil de abrir.”{/cps}"
@@ -299,6 +313,9 @@ label start:
                                 d "{cps=15}“Vai ser difícil chegar lá, mas realmente é uma entrada boa.”{/cps}"
                                 d "{cps=15}“Vou tentar subir.”{/cps}"
                                 d "{cps=15}“Se prepare para escalar também.”{/cps}"
+                                hide theo_camera_normal
+                                show theo_normal at right:
+                                with dissolve
                                 t "Parei de gravar e guardei a câmera na mochila, seguindo David alguns passos atrás."
                                 t "Escorreguei algumas vezes, mas nada que comprometesse a escalada."
                                 t "Parei do lado dele ao chegar na janela."
@@ -322,13 +339,16 @@ label start:
                                     scene quarto_infantil:
                                         zoom 0.4
                                     with pixellate
-                                    play music "audio/upside down grin2.ogg"
+                                    play music "audio/Amb Corredor.ogg"
                                     show theo_normal at right:
                                     show david_normal at left:
 
                                     t "O quarto que entramos tinha um aspecto infantil."
                                     t "As paredes, que outrora pareciam ter ostentado um azul bebê, agora estavam sujas pelo tempo e com manchas de infiltração."
                                     t "Os brinquedos empoeirados no chão e nas prateleiras, junto com a cama infantil quebrada e o pequeno colchão rasgado completavam o quadro peculiar."
+                                    hide theo_normal
+                                    show theo_camera_normal at right:
+                                    with dissolve
                                     t "Peguei a câmera e comecei a gravar."
                                     d "{cps=15}“Cara...”{/cps}"
                                     t "Arfou David."
@@ -351,7 +371,7 @@ label start:
                                         scene quartoCasal:
                                             zoom 0.67
                                         with pixellate
-                                        play music "audio/upside down grin2.ogg"
+                                        play music "audio/Amb Corredor.ogg"
                                         show theo_normal at right:
                                         show david_normal at left:
 
@@ -359,6 +379,9 @@ label start:
                                         t "O cômodo era um quarto de casal."
                                         t "E assim como o lado de fora, o local estava deplorável."
                                         t "Fedia a mofo por causa da cama."
+                                        hide theo_normal
+                                        show theo_camera_normal at right:
+                                        with dissolve
                                         t "Peguei novamente minha câmera e comecei a gravar, ao mesmo tempo que David ligava o microfone."
                                         d "{cps=15}“Foi aqui neste quarto que achamos um mapa.”{/cps}"
                                         t "Ele mostra o papel pra câmera."
@@ -370,8 +393,8 @@ label start:
                                             scene corredor:
                                                 zoom 0.25
                                             with pixellate
-                                            play music "audio/upside down grin2.ogg"
-                                            show theo_normal at right:
+                                            play music "audio/Amb Corredor.ogg"
+                                            show theo_camera_surpreso at right:
                                             show david_normal at left:
 
                                             t "O corredor daquele andar estava tão precário e sujo como o resto da casa."
@@ -390,10 +413,10 @@ label start:
 
                                             label quartoVisitaEsquerdo:
                                                 scene quarto_visitaE:
-                                                    zoom 0.25
+                                                    zoom 0.7
                                                 with pixellate
-                                                play music "audio/upside down grin2.ogg"
-                                                show theo_normal at right:
+                                                play music "audio/Amb quarto visita esquerdo.ogg"
+                                                show theo_camera_normal at right:
                                                 show david_normal at left:
 
                                                 t "Ao entrarmos pela porta, encontramos um quarto igualmente sujo e deplorável."
@@ -406,10 +429,10 @@ label start:
 
                                                 label quartoVisitaDireito:
                                                     scene quarto_visitaD:
-                                                        zoom 0.24
+                                                        zoom 0.7
                                                     with pixellate
-                                                    play music "audio/upside down grin2.ogg"
-                                                    show theo_normal at right:
+                                                    play music "audio/Amb quarto visita direito.ogg"
+                                                    show theo_camera_normal at right:
                                                     show david_normal at left:
 
                                                     t "O quarto tinha uma cama de casal mais simples que a do aposento anterior e, assim como provavelmente o resto da casa, estava sujo e destruído."
@@ -426,10 +449,10 @@ label start:
 
                                                     label despensa:
                                                         scene despensa:
-                                                            zoom 0.23
+                                                            zoom 0.8
                                                         with pixellate
-                                                        play music "audio/upside down grin2.ogg"
-                                                        show theo_normal at right:
+                                                        play music "audio/Amb dispensa.ogg"
+                                                        show theo_camera_normal at right:
                                                         show david_normal at left:
 
                                                         t "Entramos em um local com um armário apertado, repleto de prateleiras com bolachas, pó de café, sachês de chá, e vários tipos de doces."
@@ -447,8 +470,8 @@ label start:
                                                             scene banheiro:
                                                                 zoom 0.67
                                                             with pixellate
-                                                            play music "audio/upside down grin2.ogg"
-                                                            show theo_normal at right:
+                                                            play music "audio/Amb banheiro.ogg"
+                                                            show theo_camera_surpreso at right:
                                                             show david_normal at left:
 
                                                             t "Ao abrir a próxima porta, um cheiro forte de esgoto invadiu nossos narizes."
@@ -472,10 +495,10 @@ label start:
 
                                                             label salaReuniao:
                                                                 scene sala_reuniao:
-                                                                    zoom 2.0
+                                                                    zoom 0.7
                                                                 with pixellate
-                                                                play music "audio/upside down grin2.ogg"
-                                                                show theo_normal at right:
+                                                                play music "audio/Amb Sala de reunioes.ogg"
+                                                                show theo_camera_normal at right:
                                                                 show david_normal at left:
 
                                                                 t "O próximo cômodo estava bem preservado em comparação com as outras partes da casa, apesar da sujeira."
@@ -495,11 +518,12 @@ label start:
                                                                 jump escritorio
 
                                                                 label escritorio:
-                                                                    scene escritorio:
-                                                                        zoom 2.0
+                                                                    scene office_closed-door:
+                                                                        zoom 0.7
+                                                                        yalign 0.99
                                                                     with pixellate
-                                                                    play music "audio/upside down grin2.ogg"
-                                                                    show theo_normal at right:
+                                                                    play music "audio/Amb Escritorio.ogg"
+                                                                    show theo_camera_surpreso at right:
                                                                     show david_normal at left:
 
                                                                     t "Chegamos em uma porta fechada com um cadeado."
@@ -507,7 +531,7 @@ label start:
                                                                     t "David se aproximou e examinou o cadeado."
                                                                     d "{cps=15}“Parece um cadeado novo.”{/cps}"
 
-                                                                    hide theo_normal
+                                                                    hide theo_camera_surpreso
                                                                     hide david_normal
 
                                                                     jump escritorio_fechado
@@ -555,8 +579,9 @@ label start:
 
                                                                         label quartoVisitaDireito_puzzle:
                                                                             scene quarto_visitaD:
-                                                                                zoom 0.24
+                                                                                zoom 0.7
                                                                             with pixellate
+                                                                            play music "audio/Amb quarto visita direito.ogg"
                                                                             play music "audio/upside down grin2.ogg"
                                                                             show theo_normal at right:
                                                                             show david_normal at left:
@@ -570,7 +595,7 @@ label start:
 
                                                                         label quarto_infantil_puzzle:
                                                                             scene quarto_infantil:
-                                                                                zoom 0.4
+                                                                                zoom 0.8
                                                                             with pixellate
                                                                             play music "audio/upside down grin2.ogg"
                                                                             show theo_normal at right:
@@ -618,7 +643,7 @@ label start:
 
                                                                         label quartoVisitaEsquerdo_puzzle:
                                                                             scene quarto_visitaE:
-                                                                                zoom 0.25
+                                                                                zoom 0.7
                                                                             with pixellate
                                                                             play music "audio/upside down grin2.ogg"
                                                                             show theo_normal at right:
@@ -631,7 +656,7 @@ label start:
 
                                                                         label despensa_puzzle:
                                                                             scene despensa:
-                                                                                zoom 0.23
+                                                                                zoom 0.8
                                                                             with pixellate
                                                                             play music "audio/upside down grin2.ogg"
                                                                             show theo_normal at right:
@@ -644,7 +669,7 @@ label start:
 
                                                                         label salaReuniao_puzzle:
                                                                             scene sala_reuniao:
-                                                                                zoom 2.0
+                                                                                zoom 0.7
                                                                             with pixellate
                                                                             play music "audio/upside down grin2.ogg"
                                                                             show theo_normal at right:
