@@ -34,7 +34,8 @@ image theo_confuso = "images/theo_confuso.png"
 label start:
 
     # ATO UM
-    scene fundo
+    scene fundo:
+        zoom 0.70
 
     play music "audio/quarto_david.mp3"
 
@@ -104,6 +105,8 @@ label start:
 
 label garagem:
     scene garage:
+        zoom 0.70
+
     with pixellate
     play music "audio/quarto_david.mp3"
     show theo_normal at right:
@@ -134,6 +137,8 @@ label garagem:
 
 label rouxinol:
     scene rouxinol:
+        zoom 0.80
+        yalign 1.0
     with pixellate
     play music "audio/upside down grin2.ogg"
     show theo_normal at right:
@@ -163,7 +168,7 @@ label rouxinol:
 
 label casarao:
     scene casarao at center:
-        zoom 0.44
+        zoom 0.70
         yalign 0.5
     with pixellate
     play music "audio/upside down grin2.ogg"
@@ -243,6 +248,8 @@ label esquerda:
 
 label quarto_casal:
     scene quartoCasal:
+        zoom 0.70
+        yalign 1.0
     with pixellate
     play music "audio/Amb Corredor.ogg"
     show theo_normal at right:
@@ -272,6 +279,8 @@ label quarto_casal:
 
 label quarto_infantil:
     scene quarto_infantil:
+        zoom 0.90
+        yalign 0.6
     with pixellate
     play music "audio/Amb Corredor.ogg"
     show theo_normal at right:
@@ -337,6 +346,7 @@ label direita:
 
 label quarto_infantil_:
     scene quarto_infantil:
+        zoom 0.70
     with pixellate
     play music "audio/Amb Corredor.ogg"
     show theo_normal at right:
@@ -368,7 +378,7 @@ label quarto_infantil_:
 
 label quarto_casal_:
     scene quartoCasal:
-        zoom 0.67
+        zoom 0.60
     with pixellate
     play music "audio/Amb Corredor.ogg"
     show theo_normal at right:
@@ -390,7 +400,7 @@ label quarto_casal_:
 
 label corredor:
     scene corredor:
-        zoom 0.25
+        zoom 0.70
     with pixellate
     play music "audio/Amb Corredor.ogg"
     show theo_camera_surpreso at right:
@@ -413,6 +423,7 @@ label corredor:
 label quartoVisitaEsquerdo:
     scene quarto_visitaE:
         zoom 0.7
+        yalign 1.0
     with pixellate
     play music "audio/Amb quarto visita esquerdo.ogg"
     show theo_camera_normal at right:
@@ -429,6 +440,7 @@ label quartoVisitaEsquerdo:
 label quartoVisitaDireito:
     scene quarto_visitaD:
         zoom 0.7
+        yalign 1
     with pixellate
     play music "audio/Amb quarto visita direito.ogg"
     show theo_camera_normal at right:
@@ -448,7 +460,7 @@ label quartoVisitaDireito:
 
 label despensa:
     scene despensa:
-        zoom 0.8
+        zoom 0.7
     with pixellate
     play music "audio/Amb dispensa.ogg"
     show theo_camera_normal at right:
@@ -467,7 +479,7 @@ label despensa:
 
 label banheiro:
     scene banheiro:
-        zoom 0.67
+        zoom 0.70
     with pixellate
     play music "audio/Amb banheiro.ogg"
     show theo_camera_surpreso at right:
@@ -642,6 +654,7 @@ label banheiro_puzzle:
 label quartoVisitaEsquerdo_puzzle:
     scene quarto_visitaE:
         zoom 0.7
+        yalign 1.0
     with pixellate
     play music "audio/upside down grin2.ogg"
     show theo_normal at right:
@@ -654,7 +667,7 @@ label quartoVisitaEsquerdo_puzzle:
 
 label despensa_puzzle:
     scene despensa:
-        zoom 0.8
+        zoom 0.6
     with pixellate
     play music "audio/upside down grin2.ogg"
     show theo_normal at right:
@@ -680,7 +693,7 @@ label salaReuniao_puzzle:
 
 label escritorio_puzzle:
     scene escritorio:
-        zoom 2.0
+        zoom 0.7
     with pixellate
     play music "audio/upside down grin2.ogg"
     show theo_normal at right:
@@ -701,7 +714,7 @@ jump escritorio_
 
 label escritorio_:
     scene escritorio:
-        zoom 2.0
+        zoom 0.7
     with pixellate
     play music "audio/upside down grin2.ogg"
     show theo_normal at right:
