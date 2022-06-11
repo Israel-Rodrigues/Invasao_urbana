@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 907: expected a keyword argument, colon, or end of line.
-    hotspot(335, 169, 84, 80) hovered mouse "spin"
-                                            ^
+File "game/script.rpy", line 827: Line is indented, but the preceding hide statement statement does not expect a block. Please check this line's indentation.
+    hide theo_camera_surpreso
+    ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Sat Jun 11 11:09:40 2022
+Sat Jun 11 15:17:28 2022

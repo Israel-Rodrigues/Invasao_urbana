@@ -12,6 +12,10 @@ image david = "images/david.png"
 image david_normal = "images/david_normal.png"
 image david_cel_normal = "images/david_cel_normal.png"
 image david_teste = "images/david-teste.png"
+image david_frustado = im.Flip("images/atores/david/frustado.png", horizontal="True")
+image david_bravo = im.Flip("images/atores/david/bravo.png", horizontal="True")
+image david_surpreso = im.Flip("images/atores/david/surpreso.png", horizontal="True")
+image david_surpresao = im.Flip("images/atores/david/surpresao.png", horizontal="True")
 image despensa = "images/despensa.jpg"
 image escritorio = "images/escritorio.jpg"
 image fundo = "images/room.png"
@@ -32,6 +36,10 @@ image theo_normal = "images/theo_normal.png"
 image theo_camera_normal = "images/theo_camera_normal.png"
 image theo_camera_surpreso = "images/theo_camera_surpreso.png"
 image theo_confuso = "images/theo_confuso.png"
+image theo_careta = "images/atores/theo/careta.png"
+image theo_feliz = "images/atores/theo/feliz.png"
+image theo_triste3 = "images/atores/theo/triste.png"
+image theo_tristao = "images/atores/theo/tristao.png"
 
 label start:
 
@@ -48,7 +56,7 @@ label start:
     t "Eu não gostava desse clima, pois indicava chuva, pequenos engarrafamentos e poças de lama pela cidade."
     t "No entanto, ainda assim, eu me encontrava sentado na janela do quarto do meu amigo, olhando distraidamente para o horizonte."
     t "Ele, sempre animado, tagarelava sobre os vídeos que poderíamos produzir."
-    t "David e eu temos um canal de vídeos a uns três anos."
+    t "David e eu temos um canal de vídeos há uns três anos."
     t "Ele — um cara extrovertido, popular e que ama aparecer — ficou fascinado pela ideia."
     t "Enquanto eu — um cara introvertido, nerd, que manja minimamente sobre algumas coisas, mas que é bom com tecnologia — achei que seria bom juntar o útil ao agradável."
     t "Assim criamos o “Nada de Ócio”."
@@ -62,14 +70,22 @@ label start:
     with dissolve
     d "{cps=15}“Ei, Theo!”{/cps}"
     d "{cps=15}“Você ta me escutando, cara?”{/cps}"
+    show david_frustado at left:
+    with dissolve
     t "Quando virei o rosto para o David, ele parecia bem frustrado."
     d "{cps=15}“Cara, preciso da sua ajuda!”{/cps}"
     d "{cps=15}“Não consigo pensar em nada!”{/cps}"
+    show theo_careta at right:
+    with dissolve
     t "Fiz uma careta."
     t "Isso era ruim pois David era quem sempre vinha com ideias do que podíamos gravar."
+    hide theo_careta
+    with dissolve
     t "{cps=15}“Você sabe que eu não costumo ter boas ideias, cara.”{/cps}"
     t "{cps=15}“Não quer dar uma olhada na gringa?”{/cps}"
     d "{cps=15}“Não sei.”{/cps}"
+    hide david_frustado
+    with dissolve
     d "{cps=15}“Quero fazer algo mais original mas....”{/cps}"
     t "David começou a murmurar baixinho."
     d "{cps=15}“pensa, pensa...”{/cps}"
@@ -124,6 +140,7 @@ label garagem:
     t "{cps=15}“Estamos  indo para um local abandonado que fica ao lado de uma floresta enorme.”{/cps}"
     t "{cps=15}“Eu só tô me preparando...”{/cps}"
     d "{cps=15}“Você é muito surtado...”{/cps}"
+    show theo_feliz at right:
     t "Comentou rindo, antes de voltar a atenção para sua mochila quase vazia."
     t "Eu revirei os olhos."
     t "Quando terminei de guardar os equipamentos, me virei para o David e o encontrei se arrumando no espelho, fazendo caras e bocas."
@@ -134,6 +151,7 @@ label garagem:
     t "{cps=15}“Sim, senhor.”{/cps}"
     t "David colocou sua mochila nas costas e passou o braço pelos meus ombros, me conduzindo até a saída da garagem."
     d "{cps=15}“Então, vamos nessa.”{/cps}"
+    hide theo_feliz
 
     jump rouxinol
 
@@ -801,6 +819,10 @@ label escritorio_aberto:
 label escritorio_aberto_puzle:
     scene office_open_door:
         zoom 0.70
+    
+    hide theo_camera_normal
+    hide theo_camera_surpreso
+
     play music "audio/door-open.ogg" noloop
     show theo_camera_normal at right:
     t "E então, ele abriu a porta e entrou, eu o segui logo depois."
@@ -823,6 +845,10 @@ label escritorio_:
     t "David pegou a lanterna da minha mochila e iluminou as paredes."
     t "Nelas, encontramos vários papéis pregados sobre um mapa da cidade."
     t "{cps=15}“Que sinistro.”{/cps}"
+
+    show theo_triste3 at right:
+    with dissolve
+
     t "Com cautela, me aproximei da mesa, gravando cada canto que parecia interessante."
     t "Empurrei a cadeira, que rangeu bem alto, para acessar as gavetas do móvel."
     t "Abri uma por uma em busca de material para o nosso vídeo, até perceber que a última estava emperrada."
@@ -838,6 +864,10 @@ label escritorio_:
     t "Engoli seco."
     t "{cps=15}“Vou ir abrir.”{/cps}"
     t "Disse, tomando coragem."
+
+    show david_surpreso at left:
+    with dissolve
+
     t "Adrenalina e medo moviam o meu corpo."
     t "Avancei até a porta e girei a maceta mais devagar do que gostaria."
     t "O que havia do outro lado da porta tirou completamente meu fôlego."
@@ -855,6 +885,10 @@ label escritorio_:
     t "David não conseguiu concluir a frase antes de golfar novamente."
     t "Foi então que algo me veio à mente."
     t "A parede cheia de papéis."
+
+    show david_surpresao at left:
+    with dissolve
+
     t "Corri para verificar e me deparei com diversas notícias de desaparecimento."
     t "Fotos de pessoas cujos rostos eu não conhecia, cartazes de procurados e manchetes de jornal de um serial killer à solta…"
     t "Espera…"
@@ -863,10 +897,14 @@ label escritorio_:
     t "Olhei para o David esperando uma resposta de fuga, mas ele parecia em choque."
     t "Segurei seu braço e comecei a puxar em direção à porta, desesperado."
     t "{cps=15}“Cara, vamos logo, a gente precisa ir embora.”{/cps}"
+    show theo_tristao at right:
+    with dissolve
     t "De repente um barulho de porta rangendo e logo em seguida um baque ecoou por toda a casa."
     t "Parei de caminhar."
     t "Minha boca estava completamente seca."
     t "Uma sensação de pânico tomou conta do meu corpo."
+    hide david_surpresao
+    with dissolve
     t "Apertei o braço de David e olhei para ele."
     t "Passos começaram a ecoar em toda a casa, pesados e lentos."
     t "Nós temos tempo ainda."
@@ -879,7 +917,7 @@ label escritorio_:
         with pixellate
         play music "audio/upside down grin2.ogg"
 
-        t "{cps=15}“To be continued”{/cps}"
+        t "{cps=15}“Continua...”{/cps}"
 
     return
 
