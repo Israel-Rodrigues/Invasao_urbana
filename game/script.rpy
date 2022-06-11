@@ -529,7 +529,7 @@ label salaReuniao:
     jump escritorio
 
 label escritorio:
-    scene office_closed-door:
+    scene office_closed_door:
         zoom 0.7
         yalign 0.99
     with pixellate
@@ -573,19 +573,9 @@ label escritorio:
     t "David olhou em volta."
     t "{cps=15}“Vamos ter que investigar melhor então.”{/cps}"
 
-    call screen corredor
-    if _return == "quartoVisitaDireito_puzzle":
-        jump quartoVisitaDireito_puzzle
-    elif _return == "quartoVisitaEsquerdo_puzzle":
-        jump quartoVisitaEsquerdo_puzzle
-    elif _return == "quarto_infantil_puzzle":
-        jump quarto_infantil_puzzle
-    elif _return == "despensa_puzzle":
-        jump despensa_puzzle
-    elif _return == "banheiro_puzzle":
-        jump banheiro_puzzle
-    elif _return == "escritorio_puzzle":
-        jump escritorio_puzzle
+    jump corredor_escolha
+
+    return
 
 label quartoVisitaDireito_puzzle:
     scene quarto_visitaD:
@@ -601,7 +591,9 @@ label quartoVisitaDireito_puzzle:
     t "David avançou até o abajur na parede."
     d "{cps=15}“Esse abajur me chamou atenção mais cedo e vi sobre esses números. Ta escrito 1-4.”{/cps}"
 
-    call screen corredor
+    jump corredor_escolha
+
+    return
 
 label quarto_infantil_puzzle:
     scene quarto_infantil:
@@ -625,7 +617,9 @@ label quarto_infantil_puzzle:
             t "Afastei algumas pelúcias para encontrar uma boneca que me chamou a atenção."
             t "Ela vestia uma roupinha amarela com os números 2-9. Acho que é isso."
 
-    call screen corredor
+    jump corredor_escolha
+
+    return
 
 label banheiro_puzzle:
     scene banheiro:
@@ -649,7 +643,9 @@ label banheiro_puzzle:
             t "Me aproximei da privada mas parece que foi uma péssima ideia. Ver de perto a água completamente suja e preta quase me fez golfar."
             jump banheiro_puzzle
 
-    call screen corredor
+    jump corredor_escolha
+
+    return
 
 label quartoVisitaEsquerdo_puzzle:
     scene quarto_visitaE:
@@ -663,7 +659,9 @@ label quartoVisitaEsquerdo_puzzle:
     d "{cps=15}“Já dei uma olhada aqui e não achei nada que me chamou atenção.”{/cps}"
     d "{cps=15}“Bem, então vamos para o próximo.”{/cps}"
 
-    call screen corredor
+    jump corredor_escolha
+
+    return
 
 label despensa_puzzle:
     scene despensa:
@@ -676,7 +674,9 @@ label despensa_puzzle:
     d "{cps=15}“Já dei uma olhada aqui e não achei nada que me chamou atenção.”{/cps}"
     d "{cps=15}“Bem, então vamos para o próximo.”{/cps}"
 
-    call screen corredor
+    jump corredor_escolha
+
+    return
 
 label salaReuniao_puzzle:
     scene sala_reuniao:
@@ -689,7 +689,9 @@ label salaReuniao_puzzle:
     d "{cps=15}“Já dei uma olhada aqui e não achei nada que me chamou atenção.”{/cps}"
     d "{cps=15}“Bem, então vamos para o próximo.”{/cps}"
 
-    call screen corredor
+    jump corredor_escolha
+
+    return
 
 label escritorio_puzzle:
     scene escritorio:
@@ -702,7 +704,9 @@ label escritorio_puzzle:
     d "{cps=15}“Já dei uma olhada aqui e não achei nada que me chamou atenção.”{/cps}"
     d "{cps=15}“Bem, então vamos para o próximo.”{/cps}"
 
-    call screen corredor
+    jump corredor_escolha
+
+    return
 
 label escritorio_aberto:
     scene office_open_door:
@@ -710,7 +714,7 @@ label escritorio_aberto:
     play music "audio/door-open.ogg" noloop
     t "Você acertou a senha, vamos entrar"
 
-jump escritorio_
+    jump escritorio_
 
 label escritorio_:
     scene escritorio:
@@ -777,6 +781,21 @@ label escritorio_:
     t "PRECISAMOS NOS ESCONDER!"
 
     return
+
+label corredor_escolha:
+    call screen corredor
+    if _return == "quartoVisitaDireito_puzzle":
+        jump quartoVisitaDireito_puzzle
+    elif _return == "quartoVisitaEsquerdo_puzzle":
+        jump quartoVisitaEsquerdo_puzzle
+    elif _return == "quarto_infantil_puzzle":
+        jump quarto_infantil_puzzle
+    elif _return == "despensa_puzzle":
+        jump despensa_puzzle
+    elif _return == "banheiro_puzzle":
+        jump banheiro_puzzle
+    elif _return == "escritorio_puzzle":
+        jump escritorio_puzzle
 
 screen corredor:
     imagemap:
