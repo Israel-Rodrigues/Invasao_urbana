@@ -279,8 +279,8 @@ label quarto_casal:
 
 label quarto_infantil:
     scene quarto_infantil:
-        zoom 0.90
-        yalign 0.6
+        zoom 0.70
+        yalign 0.8
     with pixellate
     play music "audio/Amb Corredor.ogg"
     show theo_normal at right:
@@ -347,6 +347,7 @@ label direita:
 label quarto_infantil_:
     scene quarto_infantil:
         zoom 0.70
+        yalign 0.8
     with pixellate
     play music "audio/Amb Corredor.ogg"
     show theo_normal at right:
@@ -378,7 +379,8 @@ label quarto_infantil_:
 
 label quarto_casal_:
     scene quartoCasal:
-        zoom 0.60
+        zoom 0.70
+        yalign 1.0
     with pixellate
     play music "audio/Amb Corredor.ogg"
     show theo_normal at right:
@@ -401,6 +403,7 @@ label quarto_casal_:
 label corredor:
     scene corredor:
         zoom 0.70
+        yalign 1.0
     with pixellate
     play music "audio/Amb Corredor.ogg"
     show theo_camera_surpreso at right:
@@ -440,7 +443,7 @@ label quartoVisitaEsquerdo:
 label quartoVisitaDireito:
     scene quarto_visitaD:
         zoom 0.7
-        yalign 1
+        yalign 1.0
     with pixellate
     play music "audio/Amb quarto visita direito.ogg"
     show theo_camera_normal at right:
@@ -461,6 +464,7 @@ label quartoVisitaDireito:
 label despensa:
     scene despensa:
         zoom 0.7
+        yalign 1.0
     with pixellate
     play music "audio/Amb dispensa.ogg"
     show theo_camera_normal at right:
@@ -480,6 +484,7 @@ label despensa:
 label banheiro:
     scene banheiro:
         zoom 0.70
+        yalign 1.0
     with pixellate
     play music "audio/Amb banheiro.ogg"
     show theo_camera_surpreso at right:
@@ -507,6 +512,7 @@ label banheiro:
 label salaReuniao:
     scene sala_reuniao:
         zoom 0.7
+        yalign 1.0
     with pixellate
     play music "audio/Amb Sala de reunioes.ogg"
     show theo_camera_normal at right:
@@ -531,7 +537,7 @@ label salaReuniao:
 label escritorio:
     scene office_closed_door:
         zoom 0.7
-        yalign 0.99
+        yalign 0.1
     with pixellate
     play music "audio/Amb Escritorio.ogg"
     show theo_camera_surpreso at right:
@@ -597,7 +603,8 @@ label quartoVisitaDireito_puzzle:
 
 label quarto_infantil_puzzle:
     scene quarto_infantil:
-        zoom 0.8
+        zoom 0.70
+        yalign 0.8
     with pixellate
     play music "audio/upside down grin2.ogg"
     show theo_normal at right:
@@ -665,7 +672,8 @@ label quartoVisitaEsquerdo_puzzle:
 
 label despensa_puzzle:
     scene despensa:
-        zoom 0.6
+        zoom 0.7
+        yalign 1.0
     with pixellate
     play music "audio/upside down grin2.ogg"
     show theo_normal at right:
@@ -696,6 +704,7 @@ label salaReuniao_puzzle:
 label escritorio_puzzle:
     scene escritorio:
         zoom 0.7
+        yalign 0.1
     with pixellate
     play music "audio/upside down grin2.ogg"
     show theo_normal at right:
@@ -711,6 +720,7 @@ label escritorio_puzzle:
 label escritorio_aberto:
     scene office_open_door:
         zoom 0.70
+        yalign 1.0
     play music "audio/door-open.ogg" noloop
     t "Você acertou a senha, vamos entrar"
 
@@ -719,6 +729,7 @@ label escritorio_aberto:
 label escritorio_:
     scene escritorio:
         zoom 0.7
+        yalign 1.0
     with pixellate
     play music "audio/upside down grin2.ogg"
     show theo_normal at right:

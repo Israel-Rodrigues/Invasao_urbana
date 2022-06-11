@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 778: Line is indented, but the preceding call screen statement statement does not expect a block. Please check this line's indentation.
-    if _return == "quartoVisitaDireito_puzzle":
+File "game/script.rpy", line 383: Line is indented, but the preceding ATL statement does not expect a block. Please check this line's indentation.
+    yalign 1.0
     ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Fri Jun 10 20:26:41 2022
+Fri Jun 10 22:39:26 2022
