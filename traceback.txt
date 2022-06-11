@@ -1,28 +1,66 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 618, in script
-    with disolve
-  File "game/script.rpy", line 618, in <module>
-    with disolve
-NameError: name 'disolve' is not defined
+  File "game/script.rpy", line 887, in script
+    call screen corredor
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/script.rpy", line 903, in execute
+    screen corredor:
+  File "game/script.rpy", line 903, in execute
+    screen corredor:
+  File "game/script.rpy", line 904, in execute
+    imagemap:
+Exception: Could not find a ground image for imagemap.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 618, in script
-    with disolve
-  File "renpy/ast.py", line 1436, in execute
-    trans = renpy.python.py_eval(self.expr)
-  File "renpy/python.py", line 2276, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "renpy/python.py", line 2269, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 618, in <module>
-    with disolve
-NameError: name 'disolve' is not defined
+  File "game/script.rpy", line 887, in script
+    call screen corredor
+  File "renpy/ast.py", line 2015, in execute
+    self.call("execute")
+  File "renpy/ast.py", line 2003, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "renpy/statements.py", line 278, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "renpy/exports.py", line 3136, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 3325, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "renpy/display/core.py", line 3737, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "renpy/display/screen.py", line 436, in visit_all
+    callback(self)
+  File "renpy/display/core.py", line 3737, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "renpy/display/screen.py", line 447, in per_interact
+    self.update()
+  File "renpy/display/screen.py", line 637, in update
+    self.screen.function(**self.scope)
+  File "game/script.rpy", line 903, in execute
+    screen corredor:
+  File "game/script.rpy", line 903, in execute
+    screen corredor:
+  File "game/script.rpy", line 904, in execute
+    imagemap:
+  File "renpy/ui.py", line 1253, in _imagemap
+    ground = pick(ground, ("ground", "idle"), idle)
+  File "renpy/ui.py", line 1251, in pick
+    raise Exception("Could not find a %s image for imagemap." % name[0])
+Exception: Could not find a ground image for imagemap.
 
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
 Invasao_urbana 1.0
-Fri Jun 10 23:36:08 2022
+Sat Jun 11 11:03:04 2022

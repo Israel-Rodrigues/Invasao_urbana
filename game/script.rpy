@@ -281,13 +281,8 @@ label quarto_casal:
 
 label quarto_infantil:
     scene quarto_infantil:
-<<<<<<< HEAD
         zoom 0.70
         yalign 0.8
-=======
-        zoom 0.90
-        yalign 0.6
->>>>>>> 7cb6f658ed03f30050fc5567ccf61e0f7bdc314d
     with pixellate
     play music "audio/Amb Corredor.ogg"
     show theo_normal at right:
@@ -354,10 +349,7 @@ label direita:
 label quarto_infantil_:
     scene quarto_infantil:
         zoom 0.70
-<<<<<<< HEAD
         yalign 0.8
-=======
->>>>>>> 7cb6f658ed03f30050fc5567ccf61e0f7bdc314d
     with pixellate
     play music "audio/Amb Corredor.ogg"
     show theo_normal at right:
@@ -389,12 +381,8 @@ label quarto_infantil_:
 
 label quarto_casal_:
     scene quartoCasal:
-<<<<<<< HEAD
         zoom 0.70
         yalign 1.0
-=======
-        zoom 0.60
->>>>>>> 7cb6f658ed03f30050fc5567ccf61e0f7bdc314d
     with pixellate
     play music "audio/Amb Corredor.ogg"
     show theo_normal at right:
@@ -417,10 +405,7 @@ label quarto_casal_:
 label corredor:
     scene corredor:
         zoom 0.70
-<<<<<<< HEAD
         yalign 1.0
-=======
->>>>>>> 7cb6f658ed03f30050fc5567ccf61e0f7bdc314d
     with pixellate
     play music "audio/Amb Corredor.ogg"
     show theo_camera_surpreso at right:
@@ -460,11 +445,7 @@ label quartoVisitaEsquerdo:
 label quartoVisitaDireito:
     scene quarto_visitaD:
         zoom 0.7
-<<<<<<< HEAD
         yalign 1.0
-=======
-        yalign 1
->>>>>>> 7cb6f658ed03f30050fc5567ccf61e0f7bdc314d
     with pixellate
     play music "audio/Amb quarto visita direito.ogg"
     show theo_camera_normal at right:
@@ -485,10 +466,7 @@ label quartoVisitaDireito:
 label despensa:
     scene despensa:
         zoom 0.7
-<<<<<<< HEAD
         yalign 1.0
-=======
->>>>>>> 7cb6f658ed03f30050fc5567ccf61e0f7bdc314d
     with pixellate
     play music "audio/Amb dispensa.ogg"
     show theo_camera_normal at right:
@@ -508,10 +486,7 @@ label despensa:
 label banheiro:
     scene banheiro:
         zoom 0.70
-<<<<<<< HEAD
         yalign 1.0
-=======
->>>>>>> 7cb6f658ed03f30050fc5567ccf61e0f7bdc314d
     with pixellate
     play music "audio/Amb banheiro.ogg"
     show theo_camera_surpreso at right:
@@ -646,7 +621,8 @@ label quarto_infantil_puzzle:
 
 label quarto_infantil_puzzle_menu:
     scene quarto_infantil:
-        zoom 0.8
+        zoom 0.70
+        yalign 0.8
     play music "audio/upside down grin2.ogg"
     show theo_normal at right:
     show david_normal at left:
@@ -721,12 +697,8 @@ label quartoVisitaEsquerdo_puzzle:
 
 label despensa_puzzle:
     scene despensa:
-<<<<<<< HEAD
         zoom 0.7
         yalign 1.0
-=======
-        zoom 0.6
->>>>>>> 7cb6f658ed03f30050fc5567ccf61e0f7bdc314d
     with pixellate
     play music "audio/upside down grin2.ogg"
     show theo_normal at right:
@@ -742,6 +714,7 @@ label despensa_puzzle:
 label salaReuniao_puzzle:
     scene sala_reuniao:
         zoom 0.7
+        yalign 1.0
     with pixellate
     play music "audio/upside down grin2.ogg"
     show theo_normal at right:
@@ -757,10 +730,7 @@ label salaReuniao_puzzle:
 label escritorio_puzzle:
     scene escritorio:
         zoom 0.7
-<<<<<<< HEAD
         yalign 0.1
-=======
->>>>>>> 7cb6f658ed03f30050fc5567ccf61e0f7bdc314d
     with pixellate
     play music "audio/upside down grin2.ogg"
     show theo_normal at right:
@@ -772,7 +742,6 @@ label escritorio_puzzle:
     jump corredor_escolha
 
     return
-<<<<<<< HEAD
 
 label escritorio_fechado_puzzle:
     scene office_cadeado:
@@ -819,8 +788,6 @@ label escritorio_fechado_puzzle:
     jump corredor_escolha
 
     return
-=======
->>>>>>> 7cb6f658ed03f30050fc5567ccf61e0f7bdc314d
 
 label escritorio_aberto:
     scene office_open_door:
@@ -830,7 +797,6 @@ label escritorio_aberto:
     t "Você acertou a senha, vamos entrar"
 
     jump escritorio_
-<<<<<<< HEAD
 
 label escritorio_aberto_puzle:
     scene office_open_door:
@@ -840,16 +806,11 @@ label escritorio_aberto_puzle:
     t "E então, ele abriu a porta e entrou, eu o segui logo depois."
 
     jump escritorio_
-=======
->>>>>>> 7cb6f658ed03f30050fc5567ccf61e0f7bdc314d
 
 label escritorio_:
     scene escritorio:
         zoom 0.7
-<<<<<<< HEAD
         yalign 1.0
-=======
->>>>>>> 7cb6f658ed03f30050fc5567ccf61e0f7bdc314d
     with pixellate
     play music "audio/upside down grin2.ogg"
     show theo_normal at right:
@@ -934,13 +895,10 @@ label corredor_escolha:
         jump despensa_puzzle
     elif _return == "banheiro_puzzle":
         jump banheiro_puzzle
-<<<<<<< HEAD
     elif _return == "escritorio_fechado_puzzle":
         jump escritorio_fechado_puzzle
-=======
     elif _return == "escritorio_puzzle":
         jump escritorio_puzzle
->>>>>>> 7cb6f658ed03f30050fc5567ccf61e0f7bdc314d
 
 screen corredor:
     imagemap:
