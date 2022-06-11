@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 Sat Jun 11 00:15:24 2022
+=======
+Fri Jun 10 21:04:26 2022
+>>>>>>> 7cb6f658ed03f30050fc5567ccf61e0f7bdc314d
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
  
 
+<<<<<<< HEAD
 Bootstrap to the start of init.init took 0.09s
 Early init took 0.00s
 Loader init took 0.04s
@@ -30,10 +35,40 @@ Load screen analysis took 0.02s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
 Prepare screens took 0.08s
+=======
+Bootstrap to the start of init.init took 0.49s
+Early init took 0.03s
+Loader init took 0.15s
+Loading error handling took 0.09s
+Loading script took 0.64s
+Loading save slot metadata. took 0.35s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.19s
+Loading analysis data took 0.07s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Dump and make backups. took 0.26s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.01s
+Cleaning stores took 0.00s
+Init translation took 0.11s
+Build styles took 0.02s
+Load screen analysis took 0.06s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.30s
+>>>>>>> 7cb6f658ed03f30050fc5567ccf61e0f7bdc314d
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
+<<<<<<< HEAD
 Interface start took 0.12s
 
 Initializing gl2 renderer:
@@ -48,3 +83,24 @@ Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(1184, 666)
 Maximum texture size: 4096x4096
 Screen sizes: virtual=(1280, 720) physical=(1366, 705) drawable=(1366, 705)
 Maximum texture size: 4096x4096
+=======
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'ATI Radeon 3000 Graphics'
+Version: '3.3.11672 Compatibility Profile Context'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(1338, 753)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.04s
+Load screen analysis took 0.12s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.01s
+>>>>>>> 7cb6f658ed03f30050fc5567ccf61e0f7bdc314d
