@@ -16,6 +16,7 @@ image david_frustado = im.Flip("images/atores/david/frustado.png", horizontal="T
 image david_bravo = im.Flip("images/atores/david/bravo.png", horizontal="True")
 image david_surpreso = im.Flip("images/atores/david/surpreso.png", horizontal="True")
 image david_surpresao = im.Flip("images/atores/david/surpresao.png", horizontal="True")
+image david_feliz = im.Flip("images/atores/david/feliz.png", horizontal="True")
 image despensa = "images/despensa.jpg"
 image escritorio = "images/escritorio.jpg"
 image fundo = "images/room.png"
@@ -189,7 +190,7 @@ label rouxinol:
 label casarao:
     scene casarao at center:
         zoom 0.70
-        yalign 0.5
+        yalign 0.30
     with pixellate
     play music "audio/upside down grin2.ogg"
     show theo_normal at right:
@@ -203,6 +204,7 @@ label casarao:
     t "Comecei a tirar o equipamento da mochila, começando pela a câmera com o aparelho de luz flash em cima, enquanto David ajustava o celular para servir de microfone."
     hide theo_normal
     show theo_camera_normal at right:
+    show david_cel_normal at left:
     with dissolve
     t "{cps=15}“Ok, tudo certo aqui.”{/cps}"
     t "Olhei para meu amigo e ele fez um sinal de positivo para mim."
@@ -229,8 +231,8 @@ label casarao:
     t "Seria fácil invadir se conseguíssemos, por exemplo, um pé de cabra, mas era provável que isso fizesse um barulhão e, apesar do aspecto abandonado, não sabíamos se realmente não havia ninguém ali."
     hide david_normal
     hide theo_camera_normal
-    show theo_confuso at right:
-    with dissolve
+    hide david_cel_normal
+
     t "O que eu faço?"
 
     menu:
@@ -279,7 +281,9 @@ label quarto_casal:
     t "E assim como o lado de fora, o local estava deplorável."
     t "Fedia a mofo por causa da cama."
     hide theo_normal
+    hide david_normal
     show theo_camera_normal at right:
+    show david_cel_normal at left:
     with dissolve
     t "Peguei novamente minha câmera e comecei a gravar, ao mesmo tempo que David ligava o microfone."
     d "{cps=15}“Conseguimos entrar na casa pelo primeiro andar.”{/cps}"
@@ -311,7 +315,9 @@ label quarto_infantil:
     t "As paredes, que outrora pareciam ter ostentado um azul bebê, agora estavam sujas pelo tempo e com manchas de infiltração."
     t "Os brinquedos empoeirados no chão e nas prateleiras, junto com a cama infantil quebrada e o pequeno colchão rasgado completavam o quadro peculiar."
     hide theo_normal
+    hide david_normal
     show theo_camera_normal at right:
+    show david_cel_normal at left:
     with dissolve
     t "Peguei a câmera e comecei a gravar."
     d "{cps=15}“Cara...”{/cps}"
@@ -427,7 +433,7 @@ label corredor:
     with pixellate
     play music "audio/Amb Corredor.ogg"
     show theo_camera_surpreso at right:
-    show david_normal at left:
+    show david_cel_normal at left:
 
     t "O corredor daquele andar estava tão precário e sujo como o resto da casa."
     t "Além dos dois quartos explorados, haviam mais três de cada lado."
@@ -450,7 +456,7 @@ label quartoVisitaEsquerdo:
     with pixellate
     play music "audio/Amb quarto visita esquerdo.ogg"
     show theo_camera_normal at right:
-    show david_normal at left:
+    show david_cel_normal at left:
 
     t "Ao entrarmos pela porta, encontramos um quarto igualmente sujo e deplorável."
     t "A cama de solteiro, sem colchão e com aspecto enferrujado e o pequeno armário de madeira tomavam a maior parte do ambiente."
@@ -467,7 +473,7 @@ label quartoVisitaDireito:
     with pixellate
     play music "audio/Amb quarto visita direito.ogg"
     show theo_camera_normal at right:
-    show david_normal at left:
+    show david_cel_normal at left:
 
     t "O quarto tinha uma cama de casal mais simples que a do aposento anterior e, assim como provavelmente o resto da casa, estava sujo e destruído."
     t "A janela estava totalmente tampada por tábuas."
@@ -488,7 +494,7 @@ label despensa:
     with pixellate
     play music "audio/Amb dispensa.ogg"
     show theo_camera_normal at right:
-    show david_normal at left:
+    show david_cel_normal at left:
 
     t "Entramos em um local um pouco apertado, repleto de prateleiras com garrafas de vidro de vários tamanhos, rótulos e tipos, organizadas de maneira impecável.."
     d "{cps=15}“Pelo mapa, aqui é a adega...”{/cps}"
@@ -508,7 +514,7 @@ label banheiro:
     with pixellate
     play music "audio/Amb banheiro.ogg"
     show theo_camera_surpreso at right:
-    show david_normal at left:
+    show david_cel_normal at left:
 
     t "Ao abrir a próxima porta, um cheiro forte de esgoto invadiu nossos narizes."
     t "Demos alguns passos para trás para fugir do mal cheiro."
@@ -536,7 +542,7 @@ label salaReuniao:
     with pixellate
     play music "audio/Amb Sala de reunioes.ogg"
     show theo_camera_normal at right:
-    show david_normal at left:
+    show david_cel_normal at left:
 
     t "O próximo cômodo estava bem preservado em comparação com as outras partes da casa, apesar da sujeira."
     t "Apresentava um sofá e algumas poltronas, além de uma mesa circular com duas cadeiras."
@@ -561,7 +567,7 @@ label escritorio:
     with pixellate
     play music "audio/Amb Escritorio.ogg"
     show theo_camera_surpreso at right:
-    show david_normal at left:
+    show david_cel_normal at left:
 
     t "Chegamos em uma porta fechada com um cadeado."
     d "{cps=15}“Epa.”{/cps}"
@@ -591,7 +597,7 @@ label escritorio_fechado:
             zoom 0.70
         play music "audio/door-close.ogg" noloop
         show theo_normal at right:
-        show david_normal at left:
+        show david_bravo at left:
 
 
     d "{cps=15}“Cara, não é possível.”{/cps}"
@@ -772,8 +778,8 @@ label escritorio_fechado_puzzle:
     if str(senha_cadeado) == '4913':
         scene office_closed_door:
             zoom 0.70
-        show theo_normal at right:
-        show david_normal at left:
+        show theo_feliz at right:
+        show david_feliz at left:
         t "{cps=15}“Consegui!”{/cps}"
         d "{cps=15}“Eita, como?”{/cps}"
         t "David olhou por cima do meu ombro."
@@ -824,7 +830,7 @@ label escritorio_aberto_puzle:
     hide theo_camera_surpreso
 
     play music "audio/door-open.ogg" noloop
-    show theo_camera_normal at right:
+    
     t "E então, ele abriu a porta e entrou, eu o segui logo depois."
 
     jump escritorio_
@@ -853,29 +859,29 @@ label escritorio_:
     t "Empurrei a cadeira, que rangeu bem alto, para acessar as gavetas do móvel."
     t "Abri uma por uma em busca de material para o nosso vídeo, até perceber que a última estava emperrada."
     t "Forcei o puxador, mas a gaveta não abriu."
-    play music "audio/medo.ogg" volume 0.1
+    play music "audio/medo.ogg" volume 0.10
     t "Certo. Estava trancada. Comecei a procurar a chave na mesa."
     d "{cps=15}“Theo…”{/cps}"
-    queue sound "audio/medo.ogg" volume 0.15
+    queue sound "audio/medo.ogg" volume 0.11
     t "David chamou, voltei minha atenção para ele."
     t "{cps=15}“Encontrou alguma coisa?”{/cps}"
-    queue sound "audio/medo.ogg" volume 0.2
+    queue sound "audio/medo.ogg" volume 0.12
     t "Perguntei, me aproximando."
-    queue sound "audio/medo.ogg" volume 0.25
+    queue sound "audio/medo.ogg" volume 0.13
     t "Ele apenas apontou a lanterna para o chão, onde havia um rastro vermelho, como se algo tivesse sido arrastado."
     d "{cps=15}“Isso é o que eu tô pensando?”{/cps}"
-    queue sound "audio/medo.ogg" volume 0.3
+    queue sound "audio/medo.ogg" volume 0.14
     t "David seguiu o rastro com a lanterna até uma porta."
     t "Engoli seco."
-    queue sound "audio/medo.ogg" volume 0.35
+    queue sound "audio/medo.ogg" volume 0.15
     t "{cps=15}“Vou ir abrir.”{/cps}"
     t "Disse, tomando coragem."
-    queue sound "audio/medo.ogg" volume 0.4
+    queue sound "audio/medo.ogg" volume 0.16
 
     show david_surpreso at left:
     with dissolve
 
-    queue sound "audio/medo.ogg" volume 0.45
+    queue sound "audio/medo.ogg" volume 0.17
     t "Adrenalina e medo moviam o meu corpo."
     t "Avancei até a porta e girei a maceta mais devagar do que gostaria."
     t "O que havia do outro lado da porta tirou completamente meu fôlego."
@@ -923,14 +929,14 @@ label escritorio_:
 
     jump continua
 
-    label continua:
-        scene continua:
-        with pixellate
-        play music "audio/upside down grin2.ogg"
+label continua:
+    scene continua:
+    with pixellate
+    play music "audio/upside down grin2.ogg"
 
-        t "{cps=15}“Continua...”{/cps}"
+    t "{cps=15}“Continua...”{/cps}"
 
-    return
+return
 
 label corredor_escolha:
     call screen corredor

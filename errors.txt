@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 921: expected end of line
-    stop music "audio/medo.ogg" fadeout 1.0
-               ^
+File "game/script.rpy", line 940: Line is indented, but the preceding call screen statement statement does not expect a block. Please check this line's indentation.
+    zoom 0.7
+    ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Sun Jun 12 10:56:13 2022
+Sun Jun 12 11:35:18 2022
