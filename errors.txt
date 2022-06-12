@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 827: Line is indented, but the preceding hide statement statement does not expect a block. Please check this line's indentation.
-    hide theo_camera_surpreso
-    ^
+File "game/script.rpy", line 921: expected end of line
+    stop music "audio/medo.ogg" fadeout 1.0
+               ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Sat Jun 11 15:17:28 2022
+Sun Jun 12 10:56:13 2022

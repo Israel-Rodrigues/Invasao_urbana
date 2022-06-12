@@ -834,7 +834,7 @@ label escritorio_:
         zoom 0.7
         yalign 1.0
     with pixellate
-    play music "audio/upside down grin2.ogg"
+
     show theo_normal at right:
     show david_normal at left:
 
@@ -853,21 +853,29 @@ label escritorio_:
     t "Empurrei a cadeira, que rangeu bem alto, para acessar as gavetas do móvel."
     t "Abri uma por uma em busca de material para o nosso vídeo, até perceber que a última estava emperrada."
     t "Forcei o puxador, mas a gaveta não abriu."
+    play music "audio/medo.ogg" volume 0.1
     t "Certo. Estava trancada. Comecei a procurar a chave na mesa."
     d "{cps=15}“Theo…”{/cps}"
+    queue sound "audio/medo.ogg" volume 0.15
     t "David chamou, voltei minha atenção para ele."
     t "{cps=15}“Encontrou alguma coisa?”{/cps}"
+    queue sound "audio/medo.ogg" volume 0.2
     t "Perguntei, me aproximando."
+    queue sound "audio/medo.ogg" volume 0.25
     t "Ele apenas apontou a lanterna para o chão, onde havia um rastro vermelho, como se algo tivesse sido arrastado."
     d "{cps=15}“Isso é o que eu tô pensando?”{/cps}"
+    queue sound "audio/medo.ogg" volume 0.3
     t "David seguiu o rastro com a lanterna até uma porta."
     t "Engoli seco."
+    queue sound "audio/medo.ogg" volume 0.35
     t "{cps=15}“Vou ir abrir.”{/cps}"
     t "Disse, tomando coragem."
+    queue sound "audio/medo.ogg" volume 0.4
 
     show david_surpreso at left:
     with dissolve
 
+    queue sound "audio/medo.ogg" volume 0.45
     t "Adrenalina e medo moviam o meu corpo."
     t "Avancei até a porta e girei a maceta mais devagar do que gostaria."
     t "O que havia do outro lado da porta tirou completamente meu fôlego."
@@ -909,6 +917,9 @@ label escritorio_:
     t "Passos começaram a ecoar em toda a casa, pesados e lentos."
     t "Nós temos tempo ainda."
     t "PRECISAMOS NOS ESCONDER!"
+
+    stop sound
+    stop music fadeout 1.0
 
     jump continua
 
